@@ -1,6 +1,7 @@
 const args = process.args
 
 
+args.forEach((val, idx) => {
 if (args === 0) {
   console.log("No argument");
 } else if (args === 1) {
@@ -8,3 +9,4 @@ if (args === 0) {
 } else {
   console.log("Arguments found");
 }
+})
