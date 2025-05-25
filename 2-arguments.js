@@ -1,12 +1,12 @@
-const args = process.args
+const { argv } = require('node:process');
 
+// Count the number of actual arguments (excluding the first two default argv entries)
+const argCount = argv.length - 2;
 
-args.forEach((val, idx) => {
-if (args === 0) {
+if (argCount === 0) {
   console.log("No argument");
-} else if (args === 1) {
+} else if (argCount === 1) {
   console.log("Argument found");
 } else {
   console.log("Arguments found");
 }
-})
